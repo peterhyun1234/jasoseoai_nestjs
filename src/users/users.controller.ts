@@ -101,29 +101,4 @@ export class UsersController {
   remove(@Param('id') id: string) {
     return this.usersService.remove(id);
   }
-
-  @UseGuards(AuthGuard('jwt'))
-  @Delete('/:userId/rooms/:roomId')
-  @ApiOperation({ summary: '특정 사용자가 방을 나갑니다.' })
-  @ApiParam({
-    name: 'userId',
-    required: true,
-    description: '방을 나갈 사용자의 ID',
-  })
-  @ApiParam({
-    name: 'roomId',
-    required: true,
-    description: '사용자가 나갈 방의 ID',
-  })
-  @ApiResponse({
-    status: 200,
-    description: '사용자가 방을 성공적으로 나갔습니다.',
-    type: User,
-  })
-  async leaveRoom(
-    @Param('userId') userId: string,
-    @Param('roomId') roomId: string,
-  ) {
-    return this.usersService.leaveRoom(userId, roomId);
-  }
 }
