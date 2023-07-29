@@ -47,6 +47,27 @@ export class User extends Model {
   })
   provider: string;
 
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false,
+    defaultValue: 100,
+  })
+  remainingCreateTokens: number;
+
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false,
+    defaultValue: 100,
+  })
+  remainingWriteTokens: number;
+
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false,
+    defaultValue: 100,
+  })
+  remainingCorrectTokens: number;
+
   @BeforeCreate
   static generateUsername(user: User) {
     if (!user.username) {
