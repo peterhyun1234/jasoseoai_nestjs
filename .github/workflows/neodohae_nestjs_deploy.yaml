@@ -42,10 +42,8 @@ jobs:
         echo "RDS_USERNAME=${{ secrets.RDS_USERNAME }}" >> .env.production
         echo "RDS_PASSWORD=${{ secrets.RDS_PASSWORD }}" >> .env.production
         echo "RDS_DB_NAME=${{ secrets.RDS_DB_NAME }}" >> .env.production
+        echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env.production
         echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env.production
-        echo "API_SERVER_URI=${{ secrets.API_SERVER_URI }}" >> .env.production
-        echo "VAPID_PUBLIC_KEY=${{ secrets.VAPID_PUBLIC_KEY }}" >> .env.production
-        echo "VAPID_PRIVATE_KEY=${{ secrets.VAPID_PRIVATE_KEY }}" >> .env.production
         echo "PORT=${{ secrets.PORT }}" >> .env.production
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
