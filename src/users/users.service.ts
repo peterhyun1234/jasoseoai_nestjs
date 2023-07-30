@@ -40,4 +40,12 @@ export class UsersService {
     const user = await this.findOne(id);
     await user.destroy();
   }
+
+  async incrementToken(id: string, field: string): Promise<void> {
+    await this.userModel.increment(field, { where: { id } });
+  }
+
+  async decrementToken(id: string, field: string): Promise<void> {
+    await this.userModel.decrement(field, { where: { id } });
+  }
 }

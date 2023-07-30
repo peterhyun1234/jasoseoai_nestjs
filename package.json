@@ -33,6 +33,7 @@
     "@nestjs/sequelize": "^10.0.0",
     "@nestjs/swagger": "^7.0.4",
     "@nestjs/websockets": "^10.0.3",
+    "axios": "^1.4.0",
     "dotenv": "^16.3.1",
     "env-cmd": "^10.1.0",
     "mysql": "^2.18.1",
