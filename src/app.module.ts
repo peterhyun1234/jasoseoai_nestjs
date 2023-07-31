@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CreatedResumesModule } from './createdResumes/createdResumes.module';
+import { CorrectedResumesModule } from './correctedResumes/correctedResumes.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { CreatedResumesModule } from './createdResumes/createdResumes.module';
     AuthModule,
     UsersModule,
     CreatedResumesModule,
+    CorrectedResumesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
