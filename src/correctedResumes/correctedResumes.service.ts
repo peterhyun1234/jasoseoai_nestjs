@@ -62,7 +62,10 @@ export class CorrectedResumesService {
   }
 
   async findAll(userId: string): Promise<CorrectedResume[]> {
-    return this.correctedResumeModel.findAll({ where: { userId } });
+    return this.correctedResumeModel.findAll({
+      where: { userId },
+      order: [['createdAt', 'DESC']],
+    });
   }
 
   async findOne(id: string | number): Promise<CorrectedResume> {

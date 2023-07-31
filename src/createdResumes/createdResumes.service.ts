@@ -62,7 +62,10 @@ export class CreatedResumesService {
   }
 
   async findAll(userId: string): Promise<CreatedResume[]> {
-    return this.createdResumeModel.findAll({ where: { userId } });
+    return this.createdResumeModel.findAll({
+      where: { userId },
+      order: [['createdAt', 'DESC']],
+    });
   }
 
   async findOne(id: string | number): Promise<CreatedResume> {
