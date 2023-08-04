@@ -7,6 +7,8 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CreatedResumesModule } from './createdResumes/createdResumes.module';
 import { CorrectedResumesModule } from './correctedResumes/correctedResumes.module';
+import { WrittenResumesModule } from './writtenResumes/writtenResumes.module';
+import { ResumeItemsModule } from './resumeItems/resumeItems.module';
 
 @Module({
   imports: [
@@ -27,6 +29,8 @@ import { CorrectedResumesModule } from './correctedResumes/correctedResumes.modu
     UsersModule,
     CreatedResumesModule,
     CorrectedResumesModule,
+    WrittenResumesModule,
+    ResumeItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

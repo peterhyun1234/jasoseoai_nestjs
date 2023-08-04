@@ -2,17 +2,18 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { WrittenResume } from './writtenResume.model';
 import { UsersService } from 'src/users/users.service';
+import { ResumeItemsService } from 'src/resumeItems/resumeItems.service';
+import { ResumeItem } from 'src/resumeItems/resumeItem.model';
 
 import axios from 'axios';
-import { ResumeItem } from 'src/resumeItems/resumeItem.model';
 
 @Injectable()
 export class WrittenResumesService {
   constructor(
     @InjectModel(WrittenResume)
     private writtenResumeModel: typeof WrittenResume,
-    private resumeItemModel: typeof ResumeItem,
     private readonly usersService: UsersService,
+    private readonly resumeItemsService: ResumeItemsService,
   ) {}
 
   async getSentenceSuggestion(writtenResume: any) {
@@ -59,12 +60,15 @@ export class WrittenResumesService {
 
   async create(writtenResume: any): Promise<WrittenResume> {
     const creatingResume = {
-      resume: writtenResume.company,
+      company: writtenResume.company,
       job: writtenResume.job,
       userId: writtenResume.userId,
     };
 
-    return this.writtenResumeModel.create(creatingResume);
+    const createdResume = await this.writtenResumeModel.create(creatingResume);
+    this.resumeItemsService.createInitResumeItems(createdResume.id);
+
+    return createdResume;
   }
 
   async findAll(userId: string): Promise<WrittenResume[]> {
@@ -75,7 +79,15 @@ export class WrittenResumesService {
   }
 
   async findOne(id: string | number): Promise<WrittenResume> {
-    return this.writtenResumeModel.findByPk(id);
+    return this.writtenResumeModel.findOne({
+      where: { id },
+      include: [
+        {
+          model: ResumeItem,
+          as: 'resumeItemList',
+        },
+      ],
+    });
   }
 
   async update(
@@ -89,12 +101,7 @@ export class WrittenResumesService {
     );
 
     if (resumeItemList) {
-      await this.resumeItemModel.destroy({ where: { writtenResumeId: id } });
-      const newResumeItems = resumeItemList.map((resumeItem) => ({
-        ...resumeItem,
-        writtenResumeId: id,
-      }));
-      await this.resumeItemModel.bulkCreate(newResumeItems);
+      this.resumeItemsService.updateResumeItems(Number(id), resumeItemList);
     }
 
     return 1;
