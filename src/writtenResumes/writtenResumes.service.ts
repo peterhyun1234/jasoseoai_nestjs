@@ -27,7 +27,7 @@ export class WrittenResumesService {
       {
         model: 'gpt-3.5-turbo',
         messages: [{ role: 'system', content: writtenResume.prompt }],
-        max_tokens: 4000,
+        max_tokens: 2000,
         n: 1,
         stop: null,
         temperature: 0.3,
@@ -46,7 +46,23 @@ export class WrittenResumesService {
       );
     }
 
-    const createdByGPT = response.data.choices[0].message.content.trim();
+    let recommendation = response.data.choices[0].message.content.trim();
+    const removingWords = [
+      '다음 문장 :',
+      '답 :',
+      '답:',
+      '답: ',
+      '답 : ',
+      '답:',
+      '문장 추천:',
+      '문장 추천 :',
+      '문장 추천 : ',
+    ];
+    removingWords.forEach((word) => {
+      recommendation = recommendation.replace(word, '').trim();
+    });
+
+    const createdByGPT = recommendation;
     if (!createdByGPT) {
       throw new HttpException(
         'GPT failed to generate content',
@@ -94,9 +110,9 @@ export class WrittenResumesService {
     id: string,
     writtenResume: Partial<WrittenResume>,
   ): Promise<number> {
-    const { company, job, maxCharacterNum, resumeItemList } = writtenResume;
+    const { maxCharacterNum, resumeItemList } = writtenResume;
     await this.writtenResumeModel.update(
-      { company, job, maxCharacterNum },
+      { maxCharacterNum },
       { where: { id } },
     );
 
