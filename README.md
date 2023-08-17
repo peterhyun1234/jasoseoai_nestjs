@@ -1,73 +1,113 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## Service Introduction
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<br/>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+https://jasoseoai.co.kr/
 
-## Description
+<br/>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+자소서 AI는 사용자의 개별적인 필요와 상황에 맞게 **맞춤형 자기소개서를 작성**하는 데 도움을 줍니다. 
 
-## Installation
+모든 사용자에게 더 나은 경험을 제공하고자 모든 기능은 **무료로 제공**됩니다. 그러나 무분별한 사용을 막기 위해 **각 계정에는 사용 제한**이 있습니다.
+
+<br/>
+
+## Table of Contents
+
+- [Service Introduction](#service-introduction)
+- [Feature Introduction](#1-feature-introduction)
+  - [자기소개서 생성](#11-자기소개서-생성)
+  - [자기소개서 문장 추천](#12-자기소개서-문장-추천)
+  - [자기소개서 첨삭](#13-자기소개서-첨삭)
+- [DevOps](#2-devops)
+  - [DevOps pipeline](#21-devops-pipeline)
+  - [API Health Test](#22-api-health-test)
+  - [Monitoring](#23-monitoring)
+  - [CI/CD pipeline](#24-cicd-pipeline)
+- [How to use](#3-how-to-use)
+- [Contacts](#contacts)
+
+## 1. Feature Introduction
+
+### 1.1. 자기소개서 생성
+- **특징**:
+  - model: gpt-4
+  - temperature: 0.3
+  - max_tokens: 4000
+- **설명**: 회사와 개인의 특성을 분석하여, AI가 최적화된 자기소개서를 작성
+
+<kbd>
+  <img src="https://github.com/peterhyun1234/jasoseoai_nextjs/assets/46476398/4051d3ee-58e6-42d3-a4f6-64f42f0091c0" width="800" style="border: 1px solid gray;">
+</kbd>
+
+### 1.2. 자기소개서 문장 추천
+- **특징**:
+  - model: gpt-3.5-turbo
+  - temperature: 0.5
+  - max_tokens: 2000
+- **설명**: 작성 중인 자기소개서와 제공하신 회사 정보, 개인 정보 기반 다음 문장 추천
+
+<kbd>
+  <img src="https://github.com/peterhyun1234/jasoseoai_nextjs/assets/46476398/a7522457-84aa-4a1b-a67c-a2d813adcede" width="800" style="border: 1px solid gray;">
+</kbd>
+
+### 1.3. 자기소개서 첨삭
+- **특징**:
+  - model: gpt-4
+  - temperature: 0.3
+  - max_tokens: 4000
+- **설명**: 자기소개서에 대한 맞춤법 검사, 잘 쓴 점, 그리고 개선할 점을 상세하게 첨삭
+
+<kbd>
+  <img src="https://github.com/peterhyun1234/jasoseoai_nextjs/assets/46476398/698741c5-a3e6-4079-8b05-9fa5c25c6549" width="800" style="border: 1px solid gray;">
+</kbd>
+
+
+
+## 2. DevOps
+### 2.1. DevOps pipeline
+
+![image](https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/dff5ccdf-22c9-4a61-93e1-82f4803c0df9)
+
+### 2.2. API Health Test
+- 1분마다 각 API 호출을 통해서 서비스의 상태를 파악하고 관리자에게 알림을 보내는 시스템 구현
+
+![image](https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/5e79b0b5-07ad-439b-bd6a-e64254c06600)
+
+
+### 2.3. Monitoring
+- Grafana, Loki, Promtail 기반 서버와 컨테이너의 메트릭, 로그를 수집하고 가시화하고 특정 상황에 맞게 알림 전송
+
+![image](https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/482a85eb-95af-4b8f-b08c-e8a5dd88541e)
+
+### 2.4. CI/CD pipeline
+- Github actions를 통해서 ECR에 이미지가 저장되고, ArgoCD를 통해서 무중단 배포
+
+![image](https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/cad3bdee-98ba-4e39-a08b-f1c99693e8eb)
+
+
+## 3. How to use
 
 ```bash
-$ npm install
+
+# Clone this repo
+git clone https://github.com/peterhyun1234/jasoseoai_nextjs.git
+
+# Create a files named `.env.development` and `.env.production` in the root directory of your project.
+# Open the files and add the following environment variables:
+RDS_HOSTNAME
+RDS_PORT
+RDS_USERNAME
+RDS_PASSWORD
+RDS_DB_NAME
+OPENAI_API_KEY
+JWT_SECRET
+PORT
+
+# Run
+npm run start:dev
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Contacts
+- email: peterhyun1234@gmail.com
+- https://peterjeon.co.kr/
