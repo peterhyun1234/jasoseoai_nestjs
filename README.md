@@ -6,6 +6,10 @@ https://jasoseoai.co.kr/
 
 <br/>
 
+<img width="660" alt="image" src="https://github.com/peterhyun1234/jasoseoai_nextjs/assets/46476398/384b17b7-c3e9-4ca3-a654-a383a0ce70f9">
+
+<br/>
+
 자소서 AI는 사용자의 개별적인 필요와 상황에 맞게 **맞춤형 자기소개서를 작성**하는 데 도움을 줍니다. 
 
 모든 사용자에게 더 나은 경험을 제공하고자 모든 기능은 **무료로 제공**됩니다. 그러나 무분별한 사용을 막기 위해 **각 계정에는 사용 제한**이 있습니다.
@@ -14,17 +18,19 @@ https://jasoseoai.co.kr/
 
 ## Table of Contents
 
-- [Service Introduction](#service-introduction)
-- [Feature Introduction](#1-feature-introduction)
-  - [자기소개서 생성](#11-자기소개서-생성)
-  - [자기소개서 문장 추천](#12-자기소개서-문장-추천)
-  - [자기소개서 첨삭](#13-자기소개서-첨삭)
-- [DevOps](#2-devops)
-  - [DevOps pipeline](#21-devops-pipeline)
-  - [API Health Test](#22-api-health-test)
-  - [Monitoring](#23-monitoring)
-  - [CI/CD pipeline](#24-cicd-pipeline)
-- [How to use](#3-how-to-use)
+- [1. Feature Introduction](#1-feature-introduction)
+  - [1.1. 자기소개서 생성](#11-자기소개서-생성)
+  - [1.2. 자기소개서 문장 추천](#12-자기소개서-문장-추천)
+  - [1.3. 자기소개서 첨삭](#13-자기소개서-첨삭)
+- [2. DevOps](#2-devops)
+  - [2.1. DevOps pipeline](#21-devops-pipeline)
+  - [2.2. API Health Test](#22-api-health-test)
+  - [2.3. Monitoring](#23-monitoring)
+  - [2.4. CI/CD pipeline](#24-cicd-pipeline)
+- [3. API Server](#3-api-server)
+  - [3.1. API Documentation](#31-api-documentation)
+  - [3.2. API Server Interaction](#32-api-server-interaction)
+- [4. How to use](#4-how-to-use)
 - [Contacts](#contacts)
 
 ## 1. Feature Introduction
@@ -85,8 +91,19 @@ https://jasoseoai.co.kr/
 
 ![image](https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/cad3bdee-98ba-4e39-a08b-f1c99693e8eb)
 
+## 3. API Server
 
-## 3. How to use
+### 3.1. API Server Interaction
+
+<img src="https://github.com/peterhyun1234/jasoseoai_nextjs/assets/46476398/40610b3c-22e9-42b6-b5b1-399e30a6f3f7" width="500" alt="API Server Interaction">
+
+
+### 3.2. API Documentation
+- Swagger를 통한 REST API 문서화
+
+<img src="https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/ebdce80e-53f1-45c4-861a-d0d511b8d717" width="800" alt="Documentation">
+
+## 4. How to use
 
 ```bash
 
