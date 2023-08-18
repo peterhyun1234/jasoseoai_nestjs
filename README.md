@@ -101,7 +101,7 @@ https://jasoseoai.co.kr/
 ### 3.2. API Documentation
 - Swagger를 통한 REST API 문서화
 
-<img src="https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/ebdce80e-53f1-45c4-861a-d0d511b8d717" width="800" alt="Documentation">
+<img src="https://github.com/peterhyun1234/neodohae_nextjs/assets/46476398/ebdce80e-53f1-45c4-861a-d0d511b8d717" width="500" alt="Documentation">
 
 ## 4. How to use
 
